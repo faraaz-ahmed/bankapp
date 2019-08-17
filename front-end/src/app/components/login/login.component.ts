@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       this.errorMessage = null;
       if (data.body['status'] === 200) {
         this._loginService.updateAuthStatus(true);
-        this._router.navigateByUrl('/home');
+        this._router.navigate(['/pagenotfound']);
       }
       if (data.body['status'] === 206) {
         this.tfaFlag = true;

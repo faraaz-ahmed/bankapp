@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginServiceService } from './services/login-service/login-service.service';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginServiceService } from './services/login-service/login-service.serv
     HomeComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

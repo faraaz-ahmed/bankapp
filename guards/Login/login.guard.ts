@@ -15,7 +15,7 @@ export class LoginGuard implements CanActivate {
       return true;
     }
 
-    this._router.navigate(['/home'])
+    this._router.navigate(['/pagenotfound'])
     return false;
   }
 
