@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +12,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginServiceService } from './services/login-service/login-service.service';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { CustomerlistComponent } from './components/customerlist/customerlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
+// import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +24,18 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CustomerlistComponent,
+    CustomerdetailsComponent,
+    // MaincustomerlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [LoginServiceService],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<!-- <app-dashboard></app-dashboard> -->
+<br>
+<br>
+<div class = container>
+    <ul *ngFor = 'let customer of customerList' >
+        <li class = 'form-control' (click) = 'onClick(customer)'>
+            <span>{{customer.username + " " + customer.name}}</span>
+        </li>
+    </ul>
+</div>
+
+<!-- <app-empdetails [emp] = 'selectedEmp'></app-empdetails> -->
+
+<!-- <mat-list role="list" *ngFor = 'let customer of customerlist' class = 'list-group'>
+    <mat-list-item role = 'listitem' class = 'list-group-item'></mat-list-item>
+    <mat-list-item role="listitem" class= 'list-group-item' (click) = 'onClick(customer)'>
+      {{"Username: " + customer.username + 'Name: ' + customer.name}}
+    </mat-list-item>
+</mat-list> -->
+  

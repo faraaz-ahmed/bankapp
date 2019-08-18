@@ -2,19 +2,56 @@
   <div class="card card-container">
     <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />
     <form class="form-signin" (ngSubmit)="registerUser()" #registerForm="ngForm">
-      <input type="text" id="uname" class="form-control" name="uname" #uname="ngModel" [(ngModel)]="userObject.uname"
-        placeholder="Username" title="Please enter the username" autocomplete="off" required autofocus>
-      <input type="password" id="upass" class="form-control" name="upass" placeholder="Password"
-        title="Please enter the password" #upass="ngModel" autocomplete="off" [(ngModel)]="userObject.upass" required>
-      <input type="password" id="confirmpass" class="form-control" name="confirmpass" placeholder="Confirm password"
-        title="Please re-enter the password" #uconfirmpass="ngModel" autocomplete="off" [(ngModel)]="confirmPass"
-        required>
-      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit"
-        [disabled]="(uname?.errors?.required || upass?.errors?.required || uconfirmpass?.errors?.required) || (upass.value !== uconfirmpass.value)">Sign
-        up</button>
+     
+        <input type = 'text' class = 'form-control' placeholder = 'Enter Username' name = 'username' [(ngModel)] = 'customer.username'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter password' name = 'password' [(ngModel)] = 'customer.password'>
+        <input type = 'text' class = 'form-control' placeholder = 'Re-Enter password' name = 'confirmPass' [(ngModel)] = 'confirmPass'>
+        <span *ngIf = "customer.password == confirmPass">Passwords do not match</span>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter name' name = 'name' [(ngModel)] = 'customer.name'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter Address' name = 'address' [(ngModel)] = 'customer.address'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter email' name = 'email' [(ngModel)] = 'customer.email'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter phone number' name = 'phoneNo' [(ngModel)] = 'customer.phoneNo'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter occupation' name = 'occupation' [(ngModel)] = 'customer.occupation'>
+
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
+        <!--</button>[disabled]="(uname?.errors?.required || upass?.errors?.required || uconfirmpass?.errors?.required) || (upass.value !== uconfirmpass.value)">Sign-->
         <p style="text-align:center;">Remember credentials? <a [routerLink]="['/login']">Login
           here</a></p>
       <p class="text-success" style="text-align:center;" *ngIf="errorMessage">{{errorMessage}}</p>
     </form>
   </div>
 </div>
+<!--// "private String uusername;
+// private String upassword;
+// private String uname;
+// private String uaddress;
+// private String uemail;
+// private String upno;
+// private String uoccupation;"-->
+
+<!--<input type="text" id="username" class="form-control" name="username" #name="ngModel" [(ngModel)]="customer.username"
+        placeholder="Username" title="Please enter the username" autocomplete="off" required autofocus>
+
+      <input type="password" id="password" class="form-control" name="password" placeholder="Password"
+        title="Please enter the password" #password="ngModel" autocomplete="off" [(ngModel)]="customer.password" required>
+
+      <input type="password" id="confirmpass" class="form-control" name="confirmpass" placeholder="Confirm password"
+        title="Please re-enter the password" #confirmpass="ngModel" autocomplete="off" [(ngModel)]="confirmPass"
+        required>
+
+      <input type="text" id="name" class="form-control" name="name" placeholder="Name"
+        title="Please enter the name" #name="ngModel" autocomplete="off" [(ngModel)]="customer.name" required>
+
+      <input type="text" id="address" class="form-control" name="address" placeholder="Address"
+        title="Please enter the address" #address="ngModel" autocomplete="off" [(ngModel)]="customer.address" required>
+
+      <input type="text" id="email" class="form-control" name="email" placeholder="Number"
+        title="Please enter the email" #email="ngModel" autocomplete="off" [(ngModel)]="customer.email" required>
+
+      <input type="text" id="phoneNo" class="form-control" name="phoneNo" placeholder="Phone Number"
+        title="Please enter the phone number" #phoneNo="ngModel" autocomplete="off" [(ngModel)]="customer.phoneNo" required>
+
+      <input type="text" id="occupation" class="form-control" name="occupation" placeholder="Occupation"
+        title="Please enter the occupation" #occupation="ngModel" autocomplete="off" [(ngModel)]="customer.occupation" required>
+
+      -->
