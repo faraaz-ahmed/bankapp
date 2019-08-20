@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service/login-service.service';
 import { Router } from '@angular/router';
 import { Customer } from 'src/app/customer';
-import { CUSTOMERLIST } from 'src/app/MockCustomer';
+// import { CUSTOMERLIST } from 'src/app/MockCustomer';
 import { CustomerServiceService } from 'src/app/customer-service.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   confirmPass: string = ""
 
   constructor(private _loginService: LoginServiceService, private _router: Router, private customerService: CustomerServiceService) {
-    this.customer = new Customer("","","","","","","");
+    this.customer = new Customer(0,"","","","","","","");
   }
 
   ngOnInit() {
@@ -42,8 +42,10 @@ export class RegisterComponent implements OnInit {
     //       }, 2000);
     //     }
     //   });
-
-    CUSTOMERLIST.push(this.customer);
+    this.customerService.saveCustomer(this.customer).subscribe((data) => {
+      const result = data.body;
+    });
+    // CUSTOMERLIST.push(this.customer);
     console.log(this.customer);
     if (this.customer.password === this.confirmPass){
       console.log("passwords match");
@@ -51,7 +53,5 @@ export class RegisterComponent implements OnInit {
       console.log("passwords do not match");
     }
     this._router.navigate(['/login']);
-    
-
   }
 }

@@ -1,0 +1,18 @@
+<table class='container'>
+        <tr class='card-container'>
+<td>
+    <div class = container>
+        <ul *ngFor = 'let customerRequest of customerRequestList' >
+            <li class = 'form-control' (click) = 'onClick(customerRequest)'>
+                <span>{{customerRequest.username + " " + customerRequest.name}}</span>
+            </li>
+        </ul>
+    </div>
+</td>
+<td>
+    <div>
+    <app-customer-request-details [selectedCustomer]='selectedCustomer'></app-customer-request-details>
+    </div>
+</td>
+</tr>
+</table>

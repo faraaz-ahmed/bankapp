@@ -15,6 +15,11 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { CustomerlistComponent } from './components/customerlist/customerlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
+import { CustomerRequestsComponent } from './components/customer-requests/customer-requests.component';
+import { CustomerRequestsListComponent } from './components/customer-requests-list/customer-requests-list.component';
+import { CustomerRequestDetailsComponent } from './components/customer-request-details/customer-request-details.component';
+import { AccountslistComponent } from './components/accountslist/accountslist.component';
+// import { CustomerRequestsListComponent } from './customer-requests-list/customer-requests-list.component';
 // import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
 @NgModule({
@@ -27,6 +32,10 @@ import { CustomerdetailsComponent } from './components/customerdetails/customerd
     PagenotfoundComponent,
     CustomerlistComponent,
     CustomerdetailsComponent,
+    CustomerRequestsComponent,
+    CustomerRequestsListComponent,
+    CustomerRequestDetailsComponent,
+    AccountslistComponent,
     // MaincustomerlistComponent
   ],
   imports: [

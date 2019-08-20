@@ -1,0 +1,10 @@
+[
+    {"type":"savings", "balance":1234, "accountNo":1, "customerId":1},
+    {"type":"savings", "balance":1234, "accountNo":2, "customerId":1},
+    {"type":"savings", "balance":1234, "accountNo":3, "customerId":2},
+    {"type":"savings", "balance":1234, "accountNo":4, "customerId":2},
+    {"type":"savings", "balance":1234, "accountNo":5, "customerId":3},
+    {"type":"savings", "balance":1234, "accountNo":6, "customerId":3},
+    {"type":"savings", "balance":1234, "accountNo":7, "customerId":4},
+    {"type":"savings", "balance":1234, "accountNo":8, "customerId":5}   
+]

@@ -7,7 +7,8 @@
 // private String uoccupation;"
 
 export class Customer {
-    constructor(public username: String, 
+    constructor(public customerId: number,
+        public username: String, 
         public password: String, 
         public name: String, 
         public address: String, 

@@ -22,7 +22,7 @@ export class CustomerlistComponent implements OnInit {
   }
   onClick(customer: Customer){
     // this.selectedEmp = emp;
-    this.router .navigate(['/customerdetails', customer.username]);
+    this.router.navigate(['/customerdetails', customer.username]);
     console.log(customer);
   }
 

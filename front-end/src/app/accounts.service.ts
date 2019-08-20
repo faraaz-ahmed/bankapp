@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Accounts } from './accounts';
 import { Observable } from 'rxjs';
-import { Customer } from './customer';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+export class AccountsService {
 
-
-export class CustomerServiceService {
-
-  private url = "assets/images/jsondata/employees.json";
-  // private url = 'http://localhost:8182/app';
+  private url = "assets/images/jsondata/accounts.json";
   constructor(private http:HttpClient) { }
   // constructor() { }
 
@@ -22,11 +19,7 @@ export class CustomerServiceService {
   //   return this.http.get<Customer[]>(this.url);
   // }
 
-  getCustomerList(): Observable<Customer[]>{
-    return this.http.get<Customer[]>(this.url);
-  }
-
-  saveCustomer(customer: Customer){
-    return this.http.post<any>(this.url + '/customers/registers', customer);
+  getAccountsList(): Observable<Accounts[]>{
+    return this.http.get<Accounts[]>(this.url);
   }
 }

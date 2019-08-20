@@ -8,6 +8,11 @@ import { RegisterComponent } from './components/register/register.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { CustomerlistComponent } from './components/customerlist/customerlist.component';
 import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
+import { CustomerRequestsListComponent } from './components/customer-requests-list/customer-requests-list.component';
+import { CustomerRequestDetailsComponent } from './components/customer-request-details/customer-request-details.component';
+import { CustomerRequest } from './customer-request';
+import { CustomerRequestsComponent } from './components/customer-requests/customer-requests.component';
+import { AccountslistComponent } from './components/accountslist/accountslist.component';
 // import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
 const routes: Routes = [
@@ -18,7 +23,11 @@ const routes: Routes = [
   { path: "customerdetails/:username", component: CustomerdetailsComponent},
   // { path: "maincustomerlist", component: MaincustomerlistComponent},// canActivate: [AuthGuardGuard] },
   { path: "register", component: RegisterComponent},// canActivate: [LoginGuard] },
-  { path: "**", redirectTo: '/login', pathMatch: 'full'},// canActivate: [LoginGuard] }
+  { path: "customerRequests", component: CustomerRequestsComponent}, 
+  { path: "customerRequestsList", component: CustomerRequestsListComponent},
+  { path: "customerRequestDetails", component: CustomerRequestDetailsComponent},
+  { path: "AccountsList/:customerId", component: AccountslistComponent},
+  { path: "**", redirectTo: '/login', pathMatch: 'full'}// canActivate: [LoginGuard] }
 ];
 
 @NgModule({

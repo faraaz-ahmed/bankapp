@@ -12,7 +12,7 @@ export class CustomerdetailsComponent implements OnInit {
   public customer: Customer;
   public username: String;
   constructor(private route: ActivatedRoute, private customerService: CustomerServiceService) {
-    this.customer = new Customer("", "", "", "", "", "", "");
+    this.customer = new Customer(0,"", "", "", "", "", "", "");
    }
 
   ngOnInit() {

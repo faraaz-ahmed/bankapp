@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   errorMessage: string = null
   constructor(private _loginService: LoginServiceService, private _router: Router) {
     this.username = '';
-    this.customer = new Customer('', '', '', '', '', '','');
+    this.customer = new Customer(0, '', '', '', '', '', '','');
   }
 
   ngOnInit() {
