@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CustomerRequest } from 'src/app/customer-request';
+import { CustomerRequest } from 'src/app/classes/customer-request';
 import { ActivatedRoute } from '@angular/router';
-import { CustomerRequestService } from 'src/app/customer-request.service';
+import { CustomerRequestService } from 'src/app/services/customer-request.service';
 
 @Component({
   selector: 'app-customer-request-details',
@@ -17,7 +17,7 @@ export class CustomerRequestDetailsComponent implements OnInit {
   public selected: String;
 
   constructor(private route: ActivatedRoute, private customerRequestService: CustomerRequestService) {
-    this.selectedCustomer = new CustomerRequest("", "", "", "", "", "", "");
+    this.selectedCustomer = new CustomerRequest(1,"", "", "", "", "", "", "");
     this.selected = '';
     // this.username = '';
   }

@@ -19,6 +19,10 @@ import { CustomerRequestsComponent } from './components/customer-requests/custom
 import { CustomerRequestsListComponent } from './components/customer-requests-list/customer-requests-list.component';
 import { CustomerRequestDetailsComponent } from './components/customer-request-details/customer-request-details.component';
 import { AccountslistComponent } from './components/accountslist/accountslist.component';
+import { CustomerloginComponent } from './components/customerlogin/customerlogin.component';
+import { RegisterCofirmationComponent } from './components/register-cofirmation/register-cofirmation.component';
+import { ParentCustomerListComponent } from './components/parent-customer-list/parent-customer-list.component';
+import { CustomerPortalComponent } from './components/customer-portal/customer-portal.component';
 // import { CustomerRequestsListComponent } from './customer-requests-list/customer-requests-list.component';
 // import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
@@ -36,6 +40,10 @@ import { AccountslistComponent } from './components/accountslist/accountslist.co
     CustomerRequestsListComponent,
     CustomerRequestDetailsComponent,
     AccountslistComponent,
+    CustomerloginComponent,
+    RegisterCofirmationComponent,
+    ParentCustomerListComponent,
+    CustomerPortalComponent,
     // MaincustomerlistComponent
   ],
   imports: [

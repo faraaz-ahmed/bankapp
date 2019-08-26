@@ -1,5 +1,6 @@
 export class CustomerRequest {
-    constructor(public username: String, 
+    constructor(public uid: number,
+        public username: String, 
         public password: String, 
         public name: String, 
         public address: String, 

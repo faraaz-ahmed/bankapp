@@ -1,10 +1,9 @@
 [
-    {"type":"savings", "balance":1234, "accountNo":1, "customerId":1},
-    {"type":"savings", "balance":1234, "accountNo":2, "customerId":1},
-    {"type":"savings", "balance":1234, "accountNo":3, "customerId":2},
-    {"type":"savings", "balance":1234, "accountNo":4, "customerId":2},
-    {"type":"savings", "balance":1234, "accountNo":5, "customerId":3},
-    {"type":"savings", "balance":1234, "accountNo":6, "customerId":3},
-    {"type":"savings", "balance":1234, "accountNo":7, "customerId":4},
-    {"type":"savings", "balance":1234, "accountNo":8, "customerId":5}   
+    {"ano":1, "balance":1234, "atype":"savings", "uid":1},
+    {"ano":2, "balance":1234, "atype":"savings", "uid":2},
+    {"ano":3, "balance":1234, "atype":"savings", "uid":2},
+    {"ano":4, "balance":1234, "atype":"savings", "uid":3},
+    {"ano":5, "balance":1234, "atype":"savings", "uid":3},
+    {"ano":6, "balance":1234, "atype":"savings", "uid":4},
+    {"ano":7, "balance":1234, "atype":"savings", "uid":5}   
 ]

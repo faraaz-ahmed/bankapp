@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { LoginServiceService } from 'src/app/services/login-service/login-service.service';
-import { Customer } from 'src/app/customer';
+import { Customer } from 'src/app/classes/customer';
 
 @Component({
   selector: 'app-login',
@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
+    
   //   this._loginService.loginAuth(this.userObject).subscribe((data) => {
   //     this.errorMessage = null;
   //     if (data.body['status'] === 200) {
@@ -44,6 +45,7 @@ export class LoginComponent implements OnInit {
   //       this.errorMessage = data.body['message'];
   //     }
   //   })
+  
   this._router.navigate(['/customerlist']);
   }
 

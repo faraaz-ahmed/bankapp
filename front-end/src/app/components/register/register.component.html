@@ -6,11 +6,20 @@
         <input type = 'text' class = 'form-control' placeholder = 'Enter Username' name = 'username' [(ngModel)] = 'customer.username'>
         <input type = 'text' class = 'form-control' placeholder = 'Enter password' name = 'password' [(ngModel)] = 'customer.password'>
         <input type = 'text' class = 'form-control' placeholder = 'Re-Enter password' name = 'confirmPass' [(ngModel)] = 'confirmPass'>
-        <span *ngIf = "customer.password == confirmPass">Passwords do not match</span>
+        <span *ngIf = "customer.password != confirmPass">Passwords do not match</span>
+        <p>Select Account Type:</p>
+        <select class = 'form-control' name = 'atype' [(ngModel)] = 'atype' placeholder="Select Account Type:">
+            <option value="Savings Account">Savings Account</option>
+            <option value="Current Account">Current Account</option>
+            <option value="Fixed Deposit Account">Fixed Deposit Account</option>
+            <option value="Recurrent Deposit Account">Recurrent Deposit Account</option>
+        </select>
+        <pre>
+        </pre>
         <input type = 'text' class = 'form-control' placeholder = 'Enter name' name = 'name' [(ngModel)] = 'customer.name'>
         <input type = 'text' class = 'form-control' placeholder = 'Enter Address' name = 'address' [(ngModel)] = 'customer.address'>
         <input type = 'text' class = 'form-control' placeholder = 'Enter email' name = 'email' [(ngModel)] = 'customer.email'>
-        <input type = 'text' class = 'form-control' placeholder = 'Enter phone number' name = 'phoneNo' [(ngModel)] = 'customer.phoneNo'>
+        <input type = 'text' class = 'form-control' placeholder = 'Enter phone number' name = 'pno' [(ngModel)] = 'customer.pno'>
         <input type = 'text' class = 'form-control' placeholder = 'Enter occupation' name = 'occupation' [(ngModel)] = 'customer.occupation'>
 
       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>

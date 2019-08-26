@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CustomerRequestService } from './customer-request.service';
+import { CustomerRequestService } from './services/customer-request.service';
 
 describe('CustomerRequestService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

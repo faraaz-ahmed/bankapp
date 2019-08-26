@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Accounts } from './accounts';
 import { Observable } from 'rxjs';
+import { Customer } from '../classes/customer';
 import { HttpClient } from '@angular/common/http';
+import { CustomerRequest } from '../classes/customer-request';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AccountsService {
 
-  private url = "assets/images/jsondata/accounts.json";
+
+export class CustomerRequestService {
+
+  private url = "http://169.254.91.185:8182";
   constructor(private http:HttpClient) { }
   // constructor() { }
 
@@ -19,7 +22,7 @@ export class AccountsService {
   //   return this.http.get<Customer[]>(this.url);
   // }
 
-  getAccountsList(): Observable<Accounts[]>{
-    return this.http.get<Accounts[]>(this.url);
+  getCustomerRequestList(): Observable<CustomerRequest[]>{
+    return this.http.get<CustomerRequest[]>(this.url);
   }
 }
