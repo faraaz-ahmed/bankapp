@@ -5,11 +5,21 @@
 <div class = container>
     <ul *ngFor = 'let customer of customerList'>
         <li class = 'form-control' class = 'card card-container' >
-            <span>{{customer.username + " " + customer.name}}</span>
+            <!-- <span>{{customer.username + " " + customer.name}}</span> -->
             <tr>
-            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onAccept(customer)'>Accept</button></td><br>
+                <td><span>Customer Id :</span></td>
+                <td><input type="text" class="form-control" placeholder="{{ ' ' + customer.uid}}" readonly></td><td><pre> </pre></td>
+            </tr>
+            <tr>
+                <td><span>Customer Name :</span></td>
+                <td><input type="text" class="form-control" placeholder="{{ ' ' + customer.name}}" readonly></td><td><pre> </pre></td>
+            </tr>
+            <table>
+            <tr>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onAccept(customer)'>Accept</button></td><td><pre>  </pre></td>
             <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onReject(customer)'>Reject</button></td>
             </tr>
+            </table>
         </li>
     </ul>
 </div>

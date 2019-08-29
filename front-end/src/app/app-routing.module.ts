@@ -16,14 +16,20 @@ import { AccountslistComponent } from './components/accountslist/accountslist.co
 import { CustomerloginComponent } from './components/customerlogin/customerlogin.component';
 import { RegisterCofirmationComponent } from './components/register-cofirmation/register-cofirmation.component';
 import { ParentCustomerListComponent } from './components/parent-customer-list/parent-customer-list.component';
-import { CustomerPortalComponent } from './components/customer-portal/customer-portal.component';
+import { UserpageComponent } from './components/userpage/userpage.component';
+import { TransfersComponent } from './components/transfers/transfers.component';
+import { StatementComponent } from './components/statement/statement.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 // import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
 const routes: Routes = [
   { path: "", redirectTo: '/login', pathMatch: 'full'}, //canActivate: [LoginGuard] },
   { path: "login", component: LoginComponent},// canActivate: [LoginGuard] },
+  { path: 'adminlogin', component: AdminloginComponent},
+  { path: "user/:uid", component: UserpageComponent},
+  {path: "transfer/:uid", component: TransfersComponent},
+  {path:"statement/:uid", component: StatementComponent},
   { path: "customerLogin", component: CustomerloginComponent},
-  { path: "customerPortal", component: CustomerPortalComponent},
   { path: "customerlist", component: ParentCustomerListComponent},
   { path: "pagenotfound", component: PagenotfoundComponent},
   { path: "customerdetails/:username", component: CustomerdetailsComponent},

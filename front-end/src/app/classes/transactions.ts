@@ -18,5 +18,8 @@ export class Transactions{
         public flag: number,
         public amount: number,
         public date: String,
-        public ts: String){}
+        public ts: string,
+        public tslice: string){
+            tslice = ts.slice(0, 9) + ' ' + ts.slice(10, ts.length);
+        }
 }

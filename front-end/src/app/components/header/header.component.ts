@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isLoggedIn: boolean = false
+  isLoggedIn: boolean = false;
+  adminStatus: boolean = true;
   constructor(private _loginService: LoginServiceService, private _router: Router) {
     this._loginService.authSub.subscribe((data) => {
       this.isLoggedIn = data
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isLoggedIn = this._loginService.getAuthStatus()
+    // this.isLoggedIn = this._loginService.getAuthStatus()
   }
 
   toggleMenuBar() {
@@ -30,5 +31,17 @@ export class HeaderComponent implements OnInit {
   logout() {
     this._loginService.logoutUser()
     this._router.navigate(['/login'])
+  }
+
+  redirectToAdmin(){
+    this.adminStatus = false;
+    this.isLoggedIn = true;
+    this._router.navigate(['adminlogin']);
+  }
+
+  redirectToCustomer(){
+    this.adminStatus = true;
+    this.isLoggedIn = true;
+    this._router.navigate(['login']);
   }
 }

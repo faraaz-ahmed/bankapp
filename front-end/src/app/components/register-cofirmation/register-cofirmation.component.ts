@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RegisterCofirmationComponent implements OnInit {
 
-  @Input()
+  // @Input()
   public customerId: number;
   
   constructor(private route: ActivatedRoute) { }

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/login']">Online Banking</a>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/user/',uid]">Home </a>
+      </li>
+      <li class="nav-item active" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/transfer/',uid]">Funds Transfer</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/statement/',uid]">Transaction Statement</a>
+      </li>
+    
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']">Logout</a>
+      </li>
+      <!-- <li class="navbar-nav ml-auto" *ngIf="adminStatus">
+        <a class='nav-link' (click)='redirectToAdmin()'>Admin Login</a>
+      </li>
+      <li class="navbar-nav ml-auto" *ngIf="!adminStatus">
+        <a class='nav-link' (click)='redirectToCustomer()'>Customer Login</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<div class="container">
+  <div class="card card-container">
+    <form method="POST" (ngSubmit)="onSubmit()">
+      <span>From Account no:</span>
+      <input type="text" class='form-control' name="fromacc" [(ngModel)]='transactions.fromacc'>
+      <br><span>To Account no:</span>
+      <input type="text" class='form-control' name="tomacc"  [(ngModel)]='transactions.toacc'>
+      <br><span>Amount:</span><br>
+      <input type="text" class='form-control' name="amount" [(ngModel)]='transactions.amount'>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" class='form-control' type="submit">Transfer</button>
+    </form>
+    <p>{{errorMessage}}</p>
+  </div>
+</div>
+ 

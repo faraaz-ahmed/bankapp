@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Accounts } from '../classes/accounts';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Customer } from '../classes/customer';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,6 +18,8 @@ const httpOptions = {
 export class AccountsService {
 
   private url = "http://localhost:8182/app/accounts";
+  private url2="http://localhost:8182/app/customers/login";
+  private url3 = "http://localhost:8182/app/admin";
   constructor(private http:HttpClient) { }
   // constructor() { }
 
@@ -29,8 +33,16 @@ export class AccountsService {
     return this.http.post<any>(this.url + '/creates/' + uid, account);
   }
 
+  loginAccount(customer: Customer){
+    return this.http.post<any>(this.url2, customer);  
+  }
+
   updateAccount(account: Accounts){
     return this.http.put<any>(this.url + '/updates/' + account.ano, account, httpOptions);
+  }
+
+  updataBalance(deposit: number, account: Accounts){
+    return this.http.post<any>(this.url3 + '/updates/' + deposit, account);
   }
 
   deleteAccount(uid: number){

@@ -14,6 +14,7 @@ export class AccountslistComponent implements OnInit {
   public selectedId: number;
   public atype: String = '';
   public account: Accounts = new Accounts(0,0,'',0);
+  public deposit: number = 0;
 
   constructor(private accountService: AccountsService, private router: Router, private route: ActivatedRoute) {
     // this.accountsList = 
@@ -48,6 +49,11 @@ export class AccountslistComponent implements OnInit {
     this.accountService.updateAccount(account).subscribe(data => {
       console.log('updated the account successfully, data = ', data);      
     });
+
+    this.accountService.updataBalance(this.deposit, account).subscribe(data => {
+      console.log(data);
+    });
+
     return document.location.reload(true);
   }
   

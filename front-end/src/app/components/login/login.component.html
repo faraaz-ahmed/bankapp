@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container">
   <div class="card card-container">
     <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />
@@ -13,7 +14,8 @@
         title="Please enter the code" required> -->
       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
         <!-- [disabled]="uname?.errors?.required || upass?.errors?.required || (this.tfaFlag && authcode?.errors?.required)">Sign -->
-      <p style="text-align:center;">Want to reset login? <a routerLink = '/register'>Register here</a></p>
+      <p style="text-align:center;">Don't have an account? <a routerLink = '/register'>Register here</a></p>
+      <p style='text-align:center;'><a routerLink = '/adminlogin'>Login as Admin</a></p>
       <!-- <a routerLink = '/customerLogin'>Customer Login</a> -->
       <p class="text-danger" style="text-align:center;" *ngIf="errorMessage">{{errorMessage}}</p>
       <!-- <a routerLink = '/register'>Register here</a> -->

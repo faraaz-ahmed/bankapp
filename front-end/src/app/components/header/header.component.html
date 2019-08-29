@@ -6,10 +6,10 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavId">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item" [routerLinkActive]="['active']" *ngIf="!isLoggedIn">
+      <li class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/login']">Login</a>
       </li>
-      <li class="nav-item" [routerLinkActive]="['active']" *ngIf="!isLoggcdedIn">
+      <li class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/register']">Register</a>
       </li>
     </ul>
@@ -17,6 +17,12 @@
       <li class="nav-item" *ngIf="isLoggedIn">
         <a class="nav-link" (click)="logout()">Logout</a>
       </li>
+      <!-- <li class="navbar-nav ml-auto" *ngIf="adminStatus">
+        <a class='nav-link' (click)='redirectToAdmin()'>Admin Login</a>
+      </li>
+      <li class="navbar-nav ml-auto" *ngIf="!adminStatus">
+        <a class='nav-link' (click)='redirectToCustomer()'>Customer Login</a>
+      </li> -->
     </ul>
   </div>
 </nav>

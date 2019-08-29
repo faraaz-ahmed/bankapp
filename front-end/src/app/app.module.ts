@@ -23,6 +23,12 @@ import { CustomerloginComponent } from './components/customerlogin/customerlogin
 import { RegisterCofirmationComponent } from './components/register-cofirmation/register-cofirmation.component';
 import { ParentCustomerListComponent } from './components/parent-customer-list/parent-customer-list.component';
 import { CustomerPortalComponent } from './components/customer-portal/customer-portal.component';
+import { UserpageComponent } from './components/userpage/userpage.component';
+import { TransfersComponent } from './components/transfers/transfers.component';
+import { StatementComponent } from './components/statement/statement.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule, MatNativeDateModule, MatInputModule } from '@angular/material';
 // import { CustomerRequestsListComponent } from './customer-requests-list/customer-requests-list.component';
 // import { MaincustomerlistComponent } from './components/maincustomerlist/maincustomerlist.component';
 
@@ -44,6 +50,10 @@ import { CustomerPortalComponent } from './components/customer-portal/customer-p
     RegisterCofirmationComponent,
     ParentCustomerListComponent,
     CustomerPortalComponent,
+    UserpageComponent,
+    TransfersComponent,
+    StatementComponent,
+    AdminloginComponent,
     // MaincustomerlistComponent
   ],
   imports: [
@@ -53,6 +63,10 @@ import { CustomerPortalComponent } from './components/customer-portal/customer-p
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   providers: [LoginServiceService],
   bootstrap: [AppComponent]
