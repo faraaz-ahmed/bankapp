@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
       if (data.status == 'success'){
         this._router.navigate(['/registerConfirmation', this.customerId]);
       }else {
-        this.errorMessage = 'Error Occured';
+        this.errorMessage = data.message;
       }
 
       console.log(customerId, atype);

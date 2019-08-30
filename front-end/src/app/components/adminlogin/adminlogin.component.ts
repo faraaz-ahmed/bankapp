@@ -61,7 +61,11 @@ export class AdminloginComponent implements OnInit {
   //     console.log("Invalid Credentials");
   //   }
   // });
-
-  this._router.navigate(['/customerlist']);
+  if(this.customer.username == "faraaz" && this.customer.password == "password"){
+    this._router.navigate(['/customerlist']);
+  } else{
+    this.errorMessage = 'Invalid Credentials';
+  }
+  
   }
 }

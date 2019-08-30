@@ -17,4 +17,7 @@ public interface CustRepository extends JpaRepository<Customer, Integer> {
 	
 	@Query("select c.uid from Customer c where c.username=?1 and c.password=?2 and c.flag=1")
 	Integer validateUser(String username, String password);
+	
+	@Query("select c.username from Customer c where c.username=?1")
+	String getCustomerUname(String username);
 }

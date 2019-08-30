@@ -23,6 +23,7 @@ export class TransfersComponent implements OnInit {
   }
   onSubmit(){
     this._service.transfer(this.transactions).subscribe(data=>{
+      
         this.errorMessage=data.message;
       
     })

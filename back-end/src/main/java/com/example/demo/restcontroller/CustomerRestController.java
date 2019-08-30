@@ -28,7 +28,16 @@ public class CustomerRestController {
 	@PostMapping(path = "/registers", produces = {
 			MediaType.APPLICATION_JSON_VALUE }, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<MyResponse> registerCustomer(@RequestBody Customer cu) {
+		String temp = custrepo.getCustomerUname(cu.getUsername());
+		System.out.println(temp);
 		MyResponse resp = new MyResponse();		
+		if(temp != null) {
+			resp.setStatus("error");
+			resp.setMessage("username already exist");
+			System.out.println(resp);
+			return ResponseEntity.ok(resp);
+
+		}
 		cu.setFlag(0);
 		custrepo.save(cu);
 		resp.setStatus("success");
